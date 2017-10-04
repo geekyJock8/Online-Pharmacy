@@ -7,6 +7,7 @@
 \contentsline {subsection}{\numberline {1.4}Official website for Absolute Fitness Gym}{3}{subsection.1.4}
 \contentsline {subsection}{\numberline {1.5}Application for NGO's}{4}{subsection.1.5}
 \contentsline {subsection}{\numberline {1.6}Project for Acespritech Solutions Pvt Ltd.}{4}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Platform for Ventura(Sport fest of IIITV)}{5}{subsection.1.7}
 \contentsline {section}{\numberline {2}Feasible Idea}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Online Pharmacy}{5}{subsection.2.1}
 \contentsfinish 
