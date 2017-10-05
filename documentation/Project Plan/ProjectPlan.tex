@@ -17,7 +17,7 @@
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%-----------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
 
 \documentclass[
 10pt, % Main document font size
@@ -30,7 +30,7 @@ BCOR5mm, % Binding correction
 
 \input{structure.tex} % Include the structure.tex file which specified the document structure and layout
 
-
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
 
 %----------------------------------------------------------------------------------------
 %	TITLE AND AUTHOR(S)
@@ -52,7 +52,13 @@ BCOR5mm, % Binding correction
 %	HEADERS
 %----------------------------------------------------------------------------------------
 
------------------------------------------------------
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
 %----------------------------------------------------------------------------------------
 
@@ -63,25 +69,9 @@ BCOR5mm, % Binding correction
 \tableofcontents % Print the table of contents
 
 
+\newpage
 %----------------------------------------------------------------------------------------
-
- % This section will not appear in the table of contents due to the star (\section*)
-
- % Dummy text
-
-%----------------------------------------------------------------------------------------
-%	AUTHOR AFFILIATIONS
-%----------------------------------------------------------------------------------------
-
-\let\thefootnote\relax\footnotetext{* \textit{D-Enigma,IIIT Vadodara}}
-
-
-%----------------------------------------------------------------------------------------
-
-\newpage % Start the article content on the second page, remove this if you have a longer abstract that goes onto the second page
-
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION
+%	ABSTRACT
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
@@ -202,19 +192,21 @@ The roles and responsibilities have been divided among the team members taking i
 \end{center}
 
 \subsection{ Schedule and Milestones}
-
-
-\begin{tabular}{|| c | c | c | c ||} 
+\begin{table}[htbp]
+\setlength\tabcolsep{1pt}
+\begin{tabular}{|| p{1cm}| p{6cm}| p{4cm}| p{3cm}||}
  \hline
 Serial no. & Milestones & 	Deliverables & Proposed Deadline   \\ [1.5ex] 
  \hline\hline
  1. &	Finalize Project Idea &	Project Topic &	2nd Feb\\ 
  \hline
- 2. &	Feasibility Analysis, Report and Project Proposal &	Feasibility Report and Project Proposal	& 4th Feb \\
+ 2. &	Feasibility Analysis and Project Proposal &	Feasibility Report and Project Proposal	& 4th Feb \\
  \hline
- 3. & Plan the work to be done in the different phases of software development	& Project Plan & 19th Feb \\
+ 3. & Plan the work to be done in 
+ phases of software development	& Project Plan & 19th Feb \\
  \hline
-4 &	Requirements collection through online surveys, interviews and discussions	& SRS Document & 6th Mar \\
+4 &	Requirements collection through online surveys, interviews and discussions
+& SRS Document & 6th Mar \\
  \hline
 5 &	Tentative User Manual &	User Manual	& 6th April\\
 \hline
@@ -228,7 +220,7 @@ Serial no. & Milestones & 	Deliverables & Proposed Deadline   \\ [1.5ex]
  \hline
 \end{tabular}
 
-
+\end{table}
 
 \section{Cost Estimations}
 In software engineering, one of the most important factor is cost estimation. The cost is measured in Person hours. Cost of the project is due to the documentation and software to be delivered at the end of the project. As every software used is open source, so cost of these platforms are not taken into account.\vspace{0.5cm}\\ We are using basic \textit{Constructive Cost Model (COCOMO)} for Cost Estimation.\vspace{0.5cm}
@@ -244,24 +236,27 @@ By using these values, the range of the Eﬀort and Development Time are calcula
 The team will be in constant communication with the client (Mr Pankaj from the HCL company) in order to know his requirements and inputs under each increment. If there are any changes in the requirements, modiﬁcations will be made accordingly. We would be constantly taking his reviews on the various modules we develop and change accordingly.
 
 \subsection{ Communication within the Group}
-Type of Communication
-Medium Discussion Participants
-Project Meetings Face to Face
-Current Status Problems (if any), Documentation discussion, Application Discussion
-Entire Team
-Sharing Project Data
-Google Docs, Google Group, Github
-To keep track of current progress and completed work
-Entire Team
-Meeting with Project Managers
-SEN Lab, Whatsapp
-Guidance on Project Documentation and any other help (as and when requires)
-Entire Team, PMs
-Meeting with Teaching Assistants
-SEN Lab
-Guidance on Project related issues
-Entire Team, TAs
-
+\begin{table}[h!]
+\begin{tabular}{|| p{3cm}| p{3cm}| p{3cm}| p{3cm}||} 
+ \hline
+Type of Communication &
+Medium & Discussion & Participants\\ [1.5ex] 
+ \hline\hline
+Project Meetings & Face to Face &
+Current Status Problems (if any),  Documentation discussion, Application Discussion& Entire Team\\
+\hline
+Sharing Project Data &
+Google Docs, Google Group, Github &
+To keep track of current progress and completed work &
+Entire Team\\
+\hline 
+Meeting with Teaching Assistants &
+SEN Lab &
+Guidance on Project related issues&
+Entire Team, TAs\\[1ex] 
+ \hline
+\end{tabular}
+\end{table}
 \subsection{External Communication and Reporting:}
 
 External communication takes place in the form of  meetings with the teaching assistant assigned to our group for guidance, assistance and to solve difficulties that we might face. We also talked to our prospective clients to know their requirements as well as build a target audience to showcase our product which might be used by them.\vspace{0.5cm}
