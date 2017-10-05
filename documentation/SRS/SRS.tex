@@ -1,0 +1,308 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.1 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{../SelfArx} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+\setcounter{tocdepth}{2}
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\sffamily
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+\hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Ver. 1.0} % Journal information
+\Archive{} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{\rule{\textwidth}{0.4pt}
+\flushright  Software Requirements \\Specification\\ \Large for \\ Online Pharmacy } % Article title
+
+\Authors{{\textbf{Team Members:}} \\Anil\\Mehak\\Nikhil\\Sai\\Sudhanshu\\Vikas } % Authors
+\affiliation{\textit{D-Enigma (Group - CS 01)}} % Author affiliation
+\affiliation{\textit{Indian Institute of Information Technology, Vadodara.}} % Author affiliation
+\Keywords{Pharmacy, OTC(Over The Counter)} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------d
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{In today's world where thing is getting online, we are still lacking very far behind on Online Pharmaceuticals Services.We do have existing solution for Online Pharmacy in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution.}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\sffamily
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Print the title and abstract box
+
+\tableofcontents % Print the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction} % The \section*{} command stops section numbering
+
+We are making an �Amazon� like e-commerce platform of Pharmacy for our client. The website will contain a user end, a seller end and an admin end. We do have existing solution in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution. So, we will provide a solution where there is no third party commission, customer will be directly able to interact with the pharmacy.
+
+
+%------------------------------------------------
+
+\subsection{Purpose}
+The goal of this document is to provide support information on the Online pharmacy project (current version v1.0). It will attempt to explain the functionality of the program and the features it provides. Note: it will not fully describe how the program works or how the user should use it. For that purpose one should read the user’s manual, which is written by the creators of the project.
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\subsection{Document Conventions}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Intended Audience and Reading Suggestions}
+This Software Requirements document is intended for:
+− Developers who can review project’s capabilities and more easily understand where their efforts should be targeted to improve or add more features to it (design and code the application – it sets the guidelines for future development).
+− Project testers can use this document as a base for their testing strategy as some bugs are easier to find using a requirements document. This way testing becomes more methodically organized.
+
+− End users of this application who wish to read about what this project can do.
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Product Scope}
+Online pharmacy is a platform where you can find nearest pharmacies in your area and order prescribed medicines.
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{References}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\section{Overall Description}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Product Perspective}
+Online pharmacy is very useful and time saving program for those who want to get all the prescribed medicines at single place and
+don't have time to visit pharmacies. All you have to do make your account. Upload your prescription and order your prescription.
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Product Functions}
+Online pharmacy provides users the following functions/features:  \\
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{User Classes and Characteristics}
+Pharmacies, customers, Doctor.
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Operating Environment}
+Online pharmacy is a website. Which can be open and use in any browser or device.
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Design and Impementation Constraints}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{User Documentation}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Assumptions and Dependencies}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\section{External Interface Requirements}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{User Interfaces}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Hardware Interfaces}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Software Interfaces}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Communications Interfaces}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\section{System Features}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{System Feature {1}}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\section{Other Nonfucntional Requirements}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Performance Requirements}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Safety Requriements}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Security Requirements}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Software Quality Attrebutes}
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\subsection{Business Rules}
+
+
+%------------------------------------------------
+
+\end{document}
