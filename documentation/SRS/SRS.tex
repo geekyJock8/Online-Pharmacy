@@ -1,308 +1,438 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Stylish Article
-% LaTeX Template
-% Version 2.1 (1/10/15)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Mathias Legrand (legrand.mathias@gmail.com) 
-% With extensive modifications by:
-% Vel (vel@latextemplates.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Copyright 2014 Jean-Philippe Eisenbarth
+%This program is free software: you can 
+%redistribute it and/or modify it under the terms of the GNU General Public 
+%License as published by the Free Software Foundation, either version 3 of the 
+%License, or (at your option) any later version.
+%This program is distributed in the hope that it will be useful,but WITHOUT ANY 
+%WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+%PARTICULAR PURPOSE. See the GNU General Public License for more details.
+%You should have received a copy of the GNU General Public License along with 
+%this program.  If not, see <http://www.gnu.org/licenses/>.
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%Based on the code of Yiannis Lazarides
+%http://tex.stackexchange.com/questions/42602/software-requirements-specification-with-latex
+%http://tex.stackexchange.com/users/963/yiannis-lazarides
+%Also based on the template of Karl E. Wiegers
+%http://www.se.rit.edu/~emad/teaching/slides/srs_template_sep14.pdf
+%http://karlwiegers.com
+\documentclass{scrreprt}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={Software Requirement Specification},    % title
+    pdfauthor={Jean-Philippe Eisenbarth},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
 
-\documentclass[fleqn,10pt]{../SelfArx} % Document font size and equations flushed left
-
-\usepackage[english]{babel} % Specify a different language here - english by default
-
-\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
-
-\setcounter{tocdepth}{2}
-
-%----------------------------------------------------------------------------------------
-%	COLUMNS
-%----------------------------------------------------------------------------------------
-
-\sffamily
-
-\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
-\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
-
-%----------------------------------------------------------------------------------------
-%	COLORS
-%----------------------------------------------------------------------------------------
-
-\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
-\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
-
-%----------------------------------------------------------------------------------------
-%	HYPERLINKS
-%----------------------------------------------------------------------------------------
-
-\usepackage{hyperref} % Required for hyperlinks
-\hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
-
-%----------------------------------------------------------------------------------------
-%	ARTICLE INFORMATION
-%----------------------------------------------------------------------------------------
-
-\JournalInfo{Ver. 1.0} % Journal information
-\Archive{} % Additional notes (e.g. copyright, DOI, review/research article)
-
-\PaperTitle{\rule{\textwidth}{0.4pt}
-\flushright  Software Requirements \\Specification\\ \Large for \\ Online Pharmacy } % Article title
-
-\Authors{{\textbf{Team Members:}} \\Anil\\Mehak\\Nikhil\\Sai\\Sudhanshu\\Vikas } % Authors
-\affiliation{\textit{D-Enigma (Group - CS 01)}} % Author affiliation
-\affiliation{\textit{Indian Institute of Information Technology, Vadodara.}} % Author affiliation
-\Keywords{Pharmacy, OTC(Over The Counter)} % Keywords - if you don't want any simply remove all the text between the curly brackets
-\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
-
-%----------------------------------------------------------------------------------------d
-%	ABSTRACT
-%----------------------------------------------------------------------------------------
-
-\Abstract{In today's world where thing is getting online, we are still lacking very far behind on Online Pharmaceuticals Services.We do have existing solution for Online Pharmacy in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution.}
-
-%----------------------------------------------------------------------------------------
-
+%}
+\usepackage{hyperref}
 \begin{document}
-\sffamily
-\flushbottom % Makes all text pages the same height
 
-\maketitle % Print the title and abstract box
+\begin{flushright}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{SOFTWARE REQUIREMENTS\\ SPECIFICATION}\\
+        \vspace{1.9cm}
+        for\\
+        \vspace{1.9cm}
+        Online Pharmacy\\
+        \vspace{1.9cm}
+        \LARGE{Version \myversion approved}\\
+        \vspace{1.9cm}
+        Team no. CS#01\\
+        \vspace{1.9cm}
+        IIIT VADODARA\\
+        \vspace{1.9cm}
+        \today\\
+    \end{bfseries}
+\end{flushright}
 
-\tableofcontents % Print the contents section
+\tableofcontents
 
-\thispagestyle{empty} % Removes page numbering from the first page
 
-%----------------------------------------------------------------------------------------
-%	ARTICLE CONTENTS
-%----------------------------------------------------------------------------------------
+\chapter*{Revision History}
 
-\section{Introduction} % The \section*{} command stops section numbering
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+	    Name & Date & Reason For Changes & Version\\
+        \hline
+	    21 & 22 & 23 & 24\\
+        \hline
+	    31 & 32 & 33 & 34\\
+        \hline
+    \end{tabular}
+\end{center}
 
-We are making an �Amazon� like e-commerce platform of Pharmacy for our client. The website will contain a user end, a seller end and an admin end. We do have existing solution in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution. So, we will provide a solution where there is no third party commission, customer will be directly able to interact with the pharmacy.
+\chapter{Introduction}
 
+\section{Purpose}
+The purpose of this document is to give a detailed description of the requirements for the “Online-pharmacy” platform. It will illustrate the purpose and complete declaration for the development of system. It will also explain system constraints, interface and interactions with other external applications. This document is primarily intended as general non-technical description of the system. 
 
-%------------------------------------------------
+\section{Document Conventions}
+<---TODO :To convert this document into proper latex pdf format--->
 
-\subsection{Purpose}
-The goal of this document is to provide support information on the Online pharmacy project (current version v1.0). It will attempt to explain the functionality of the program and the features it provides. Note: it will not fully describe how the program works or how the user should use it. For that purpose one should read the user’s manual, which is written by the creators of the project.
+\section{Intended Audience and Reading Suggestions}
+This document is intended for Developers, Unit testers, Client, Project Maintners and future developers. \\
 
-%------------------------------------------------
+The remainder of this document includes four sections.
+The first one provides an overview of the system functionality and system interaction with other systems. This section also introduces different types of stakeholders and their interaction with the system. Further, the chapter also mentions the system constraints and assumptions about the product.  \\
 
-%------------------------------------------------
+The second section provides the external requirements in detailed terms and a description of the different system interfaces.  \\
 
-\subsection{Document Conventions}
+The third section deals with various functional requirements. Different specification techniques are used in order to specify the requirements more precisely for different audiences.    \\
 
+The fourth section deals with various non-functional requirements. It includes both security and performance related requirements along with specifying the attributes which ensure quality of the software.   \\
 
-%------------------------------------------------
 
+\section{Project Scope}
+This is a very wide-scoped project mainly because there are very few constraints. Any Pharmacy seller who has internet access, can register on our website and use it. Similarly any Consumer who wants to purchase a product can buy it through this.   \\
 
-%------------------------------------------------
+But we do have some area limitations as we have designed our project based on the legal rules of Government of India. So, this project can be extended to different countries based on their legal rules and regulation.
 
-\subsection{Intended Audience and Reading Suggestions}
-This Software Requirements document is intended for:
-− Developers who can review project’s capabilities and more easily understand where their efforts should be targeted to improve or add more features to it (design and code the application – it sets the guidelines for future development).
-− Project testers can use this document as a base for their testing strategy as some bugs are easier to find using a requirements document. This way testing becomes more methodically organized.
+\section{References}
+$<$   $>$
 
-− End users of this application who wish to read about what this project can do.
 
-%------------------------------------------------
+\chapter{Overall Description}
 
+\section{Product Perspective}
+The product which is being developed is stand-alone, self-contained product. It is based on the idea of the client. The software in itself is unique in several of its features. Although existing similar solution do exist but none of them implement several key features of this project.
 
-%------------------------------------------------
+\section{Product Functions}
+The major functions are stated below:
+\begin{enumerate}
+\item	Interface for Consumer
+\item	Interface for Pharmacy Seller
+\item	Interface for Administration
+\item	Searching of OTC products by Consumer
+\item	Offline and Online Ordering by Consumer
+\item	Purchase of medicines through Prescription for the consumer
+\item	Review System
+\item	Inventory management for the Pharmacy Seller
+\item	Profile Management for Consumer
+\end{enumerate}
 
-\subsection{Product Scope}
-Online pharmacy is a platform where you can find nearest pharmacies in your area and order prescribed medicines.
+\section{User Classes and Characteristics}
+There are three types of users that interact with this system the buyers, sellers (Pharmacists),and the administrator . Each of these three types of users has different use of the system so each of them has their own requirements.   \\
 
-%------------------------------------------------
+The buyers can use our system to buy two type of products OTC and NON-OTC .   \\
 
+The OTC products can be normally searched through our system and our system would give user 5-6 pharmacy options (based on the distance of pharmacy’s location from the buyer ) to choose from.     \\
 
-%------------------------------------------------
+The user will be given options to buy online and can also go to the store offline by taking a look at the address mentioned.  \\
 
-\subsection{References}
+The NON-OTC products can not be bought without prescription so the user will be given an option to upload his/her prescription and hence forth this prescription would be sent as a request to the nearby pharmacies in the range set by user and whichever accepts the request first would be given the order to handle.   \\
 
+The second class of users include the pharmacists who want to use our platform/system to sell their products. The pharmacist has to maintain an inventory for the OTC products for the consumer to look at the information and buy them. The pharmacists have to keep record of the products , order history and also be in contact with the user in both cases of products .   \\
 
-%------------------------------------------------
+The third class of user is the administrator would have the task to authenticate and monitor the working of Pharmacies on our platform.   \\
 
 
-%------------------------------------------------
+\section{Operating Environment}
+The software can be operated on any device with an internet connection and an internet browser. The software doesn’t require any specific hardware constraints . It does require the web browser to be able to process CSS3, HTML5 and Javacript(All the modern browser satisy this condition).
 
-\section{Overall Description}
 
+\section{Design and Implementation Constraints}
+\item Inability to find a suitable Databse/API of Government verified Medicines.
+\item Being Restricted to government policies regarding the pharmacies.
 
-%------------------------------------------------
 
 
-%------------------------------------------------
+\section{User Documentation}
+There will be FAQ section in the site but there will not be any user manuals and on-line helps as in such. The FAQ section will cover most of the detailing a user/seller will need. We plan to integrate UI/UX into our project so that user doesn’t really need any sort of help. We plan to make a solution where the user’s intiution takes him/her to all the right places.   \\
 
-\subsection{Product Perspective}
-Online pharmacy is very useful and time saving program for those who want to get all the prescribed medicines at single place and
-don't have time to visit pharmacies. All you have to do make your account. Upload your prescription and order your prescription.
+On the other hand we’ll have an Usage Manuals for Admins, where we would have described all usages in details.   \\
 
-%------------------------------------------------
 
+\section{Assumptions and Dependencies}
+\begin{itemize}
+\item We will be able to gather database of Government Verified Database.
+\item Pharmacy Sellers will have Computer/Mobile i.e a way to access the Internet
+and will have required skills to access the Platform.
+\item Pharmacy Sellers will be willing put effort in online inventory management.
+\item Pharmacy Sellers/Consumers will be able to understand written English.
+\item Pharmacy Sellers will manage the delivery of product.
+\item Restrictions of government policies regarding the pharmacies.
+\item It’s possible to make an efficient solutions on the technology we are using.
+\item Usage of libraries does not conflict with our design.
+\end{itemize}
 
-%------------------------------------------------
+\chapter{External Interface Requirements}
 
-\subsection{Product Functions}
-Online pharmacy provides users the following functions/features:  \\
+\section{User Interfaces}
+Following requirements have been gathered regarding the interface level design:
+\begin{enumerate}
+ \item The app should be user friendly. It should not be overpopulated with unnecessary icons and information. 
+ \item The interface should guide the user to respective screens so that the user does not feel lost in the middle of using the app.
+ \item If an event occurs, the user should be guided with a message dialog box displaying either the event is successful or an error has 
+       occurred.    
+ \item The user shall be able to categorize the notifications he receives and should be able to manage those specifically
+ \item The user should be able to open all the related files in the app itself and the application itself should provide the view and    function to edit the same.
+ \item Every interface should guide the user either to the home page or it should provide help option to filter out his/her query or problems. 
+\end{enumerate}
 
-%------------------------------------------------
 
+\section{Hardware Interfaces}
+$<$$>$
 
-%------------------------------------------------
 
-\subsection{User Classes and Characteristics}
-Pharmacies, customers, Doctor.
+\section{Software Interfaces}
+Our product is a website so it would be using mainly two other software components 
 
-%------------------------------------------------
+\begin{enumerate}
+\item Server
+\item Database
+\end{enumerate}
+The server is the place where your application would be running and our users (customers and pharmacist) would be able to interact with each other.  \\
+The database queries would be called at respective times when data regarding any detail, order or any other functionality would be needed which the user has stored in the past.
 
 
-%------------------------------------------------
+\section{Communications Interfaces}
+The communication functions required by our product are:
+\begin{enumerate}
+\item e-mail 
+\item a well supported web browser
+\item a network server using HTTP protocol
+\item A notification management system
+\end{enumerate}
 
-\subsection{Operating Environment}
-Online pharmacy is a website. Which can be open and use in any browser or device.
+\chapter{System Features}
+This section includes the requirements that specify all the fundamental actions of the software system.
 
-%------------------------------------------------
 
+\section{Functional Requirements}
+The functional requirements are:  \\
 
-%------------------------------------------------
+\textbf{ID: FR0}   \\
+\textbf{TITLE: Home Page}   \\
+Desc: Our site basically has provision for two types of users which include buyers (general public) and sellers (Pharmacists). This basically is a platform which leads the various types of users to their respective interfaces and for this there should be an option given to select which type of user is the person accessing the website.  \\
 
-\subsection{Design and Impementation Constraints}
 
+\subsection{User Class 1 – The User}  
 
-%------------------------------------------------
+\textbf{ID: FR1}  \\
+\textbf{TITLE: User Registration}  \\
+\textbf{Priority:H}  \\
+Desc: A user should be able to register to our site and buy the products he/she wishes to. After completing the registration a verification mail would be sent to the email id registered , hence after completing the verification , the registration would be complete.   \\
 
+\textbf{ID: FR2}  \\
+\textbf{TITLE: User LogIn}   \\
+\textbf{Priority: H}  \\
+Desc: After successfully registering , the user  would be able to log in to the site and access the further functionalities. This task would require saving of the username , email id and password of the user for future reference.  \\
 
-%------------------------------------------------
+\textbf{ID: FR2}   \\
+\textbf{TITLE: My Profile}   \\
+\textbf{Priority: H}  \\
+Desc: Once a user registers at our site , his/her account is formed which means it is allocated a section in the database where it would contain information like name, username , email id, contact number, address, etc.  \\
+The user under this functionality can review his/her account details.   \\
 
-\subsection{User Documentation}
+\textbf{ID: FR3}  \\
+\textbf{TITLE: Edit Profile}  \\
+\textbf{Priority: H}   \\
+Desc:  After the user has signed in , the user can go to my profile and will get an option to change any of the details he has entered earlier  and when he chooses to save the changes , the database also gets modified accordingly.  \\
 
+\textbf{ID: FR4}   \\
+\textbf{TITLE: Retrieve Password}   \\
+\textbf{Priority: H}  \\
+Desc: The user has the option to retrieve his password if he/she forgets . By clicking on the forget password option a link to change password would be sent. This change would also be made in the database.   \\
+
+\textbf{ID: FR5}  \\
+\textbf{TITLE: Search for OTC}  \\ 
+\textbf{Priority: H}  \\
+Desc: The user can search for the products he wishes to but his search would be successful if its an OTC product because according to government laws NON-OTC products cannot be sold without prescription.  \\
+After the user searches for an OTC product he would get a list view of all the related items.   \\
+
+\textbf{ID: FR6}  \\
+\textbf{TITLE: List View of the items related to the product searched}   \\
+\textbf{Priority: H}   \\
+Desc: These items in the list would be links which when clicked would lead to a page where there would be another list view containing the nearby pharmacies selling that particular product.   \\
+
+\textbf{ID: FR7}   \\
+\textbf{TITLE : List View of the pharmacies selling the product user selected}  \\
+\textbf{Priority: H}   \\
+Desc :This list gives user a choice to select from the various nearby pharmacies according to their convenience and when they select a particular pharmacy , first option is they can create an order  and an entry would be made in both the order log of user as well as pharmacist or they can add the particular item sold by the particular pharmacy to their cart.   \\
+
+\textbf{ID: FR8}   \\
+\textbf{TITLE: Upload Prescription}   \\
+\textbf{Priority:H}  \\
+Desc: The user is given this functionality in order to buy NON-OTC products wherein the user uploads an image of the prescription and gets a list of options hence forth , first  either he/she has to buy all the medicines  or he/she wants the pharmacy to contact them . After this they get an option to select whether they want to buy generic medicines or not.After selecting all these the request is send to nearby pharmacies whichever pharmacy responds first gets the order.  \\
+
+\textbf{ID:FR9}   \\
+\textbf{TITLE: Add to Cart}  \\
+\textbf{Priority:H}   \\
+Desc: While browsing for the items a user gets an option to add a particular item he/she likes to the cart from where he can buy the product in future as when he feels comfortable.  \\
+
+\textbf{ID :FR10}  \\
+\textbf{TITLE: Check Cart}  \\
+\textbf{Priority:H}  \\
+Desc : The user would be provided with an  option to check the cart whether there is a product he/she has selected earlier and now he/she gets an option to buy by clicking on the buy now option.  \\
+
+\textbf{ID: FR11} \\
+\textbf{TTILE: Buy Now} \\
+\textbf{Priority:H}  \\
+Desc : The user would get this option twice first while searching and second while going through the cart. In both these cases if the user selects this option an order gets placed and an an entry is made accordingly in both the user as well as seller’s account.  \\
 
-%------------------------------------------------
+\textbf{ID:FR12}  \\
+\textbf{TITLE: Check Order Log}  \\
+\textbf{Priority:H}  \\
+Desc: The user is given a reference to all his previous orders if he wants to access any of the details of any previous order and through this can also review any of the previous uploaded prescriptions.  \\
 
+\textbf{ID: FR13}  \\
+\textbf{TITLE: Cancel Order}  \\
+\textbf{Priority:H}  \\
+Desc: The user gets an option to cancel any order two days prior to the due delivery date by clicking on the cancel order option in the order log corresponding to the respective order.  \\
 
-%------------------------------------------------
+\textbf{ID:FR14}  \\
+\textbf{TITLE: Review} \\
+\textbf{Priority:H}  \\
+Desc: The user gets an option to review a pharmacy after his/her order is successfully placed where he gives review by two ways one is the star rating and other is comment. This review gets stored and is used by the administrator to review the performance of the pharmacy  \\
 
-\subsection{Assumptions and Dependencies}
+\textbf{ID:FR15}                                                 \\
+\textbf{TITLE: Complaint against a pharmacy}                     \\
+\textbf{Priority:H}                                              \\
+Desc: the user can complaint against a pharmacy for a misconduct by sending a request to the administrator.
 
 
-%------------------------------------------------
 
 
-%------------------------------------------------
+\subsection{User Class 2 – The Seller (Pharmacist)}  
+ 
+\textbf{ID: FR16}   \\
+\textbf{TITLE: Registration}  \\
+\textbf{Priority:H}  \\
+Desc: When a pharmacist visits our platform for the first time he/she has to register by submitting two documents which include drug licence and VAT registration and once approved his/her details gets stored in the database and these details include pharmacy name, owner name , address , contact number ,id ,password,etc.   \\
 
-\section{External Interface Requirements}
+\textbf{ID: FR17}  \\
+\textbf{TITLE: LogIn}  \\
+\textbf{Priority:H}  \\
+Desc : The pharmacist which have been approved by the administrator  get this option where in using their id and password which would be stored in a database , they are led to their respective dashboard.  \\
 
+\textbf{ID: FR18}  \\
+\textbf{TITLE: Product Inventory Formation}  \\
+\textbf{Priority:H}   \\
+Desc: This feature requires the pharmacist to select all the products which he/she wants to sell on our platform from the database provided and enter few specification like stock of the product he has and the price.   \\
 
-%------------------------------------------------
+\textbf{ID: FR19}  \\
+\textbf{TITLE	: Adding a new Item to the database}  \\
+\textbf{Priority:H}  \\
+Desc: This feature basically is provided in case the pharmacist wants to sell an item which is not present in the database, he/she can add that to the database with the help of admin.  \\
 
+\textbf{ID: FR20}  \\
+\textbf{TITLE: Reviewing order log}   \\
+\textbf{Priority:H}  \\
+Desc: The pharmacist gets to review all his previous orders and know what items were sold when, to whom and how much sale was made.  \\
 
-%------------------------------------------------
+\textbf{ID:FR21}  \\
+\textbf{TITLE: My Profile}   \\
+\textbf{Priority: H}  \\
+Desc: Once a pharmacist registers at our site , his/her account is formed which means it is allocated a section in the database where it would contain information like name, username , email id, contact number, address, products he/she has ,etc. The user under this functionality can review his/her account details.  \\
 
-\subsection{User Interfaces}
+\textbf{ID: FR22}  \\
+\textbf{TITLE: Edit Profile}  \\
+\textbf{Priority: H}  \\
+Desc:  After the user has signed in , the user can go to my profile and will get an option to change any of the details he has entered earlier  and when he chooses to save the changes , the database also gets modified accordingly.  \\
 
+\textbf{ID:FR23}  \\
+\textbf{TITLE: Notification Management}  \\
+\textbf{Priority:H}   \\
+Desc: The user can receive notifications of three kinds:  
+\begin{enumerate}
+\item	The request for delivery of an order pertained in a prescription  
+\item	The request for an OTC product searched   
+\item	The alerts from the admin regarding the performance   
+\end{enumerate}
 
-%------------------------------------------------
+\textbf{ID:FR24}  \\
+\textbf{TITLE: Review Comments}   \\
+\textbf{Priority:H}  \\
+Desc : The user (pharmacist) gets to see the reviews of his/her consumers.  \\
 
+\subsection{User Class 3 – The Administrator}  \\
+\textbf{ID:FR25}   \\
+\textbf{TITLE: Pharmacy Verification}  \\
+\textbf{Priority:H}   \\
+Desc: The administrator does the task of reviewing the documents submitted by a particular pharmacy who wants to use our platform and gives a green signal if the pharmacy seems fine.  \\
 
-%------------------------------------------------
+\textbf{ID:FR26}  \\
+\textbf{TITLE: Complaint Management}  \\
+\textbf{Priority:H}   \\
+Desc: The administrator needs to give an alert to the pharmacy against which a complaint has been received after checking if the complaint is fake or not.  \\
 
-\subsection{Hardware Interfaces}
+\textbf{ID:FR27}  \\
+\textbf{TITLE: Review Management}  \\
+\textbf{Priority:H}   \\
+Desc: The administrator has access to the reviews in order to track the performance of the various pharmacies registered at our platform and also the power to remove  a very poorly rated pharmacy.		 \\
 
 
-%------------------------------------------------
+\section{System Feature 2 (and so on)}
 
 
-%------------------------------------------------
+\chapter{Other Nonfunctional Requirements}
 
-\subsection{Software Interfaces}
+\section{Performance Requirements}
 
+\item \textbf{User Satisfaction}   \\
+This application has a benchmark which should be satisfied. The benchmark is “The product should stand up to the user’s expectations”. Application should always be active.  \\
 
-%------------------------------------------------
+\item \textbf{Response Time}  \\
+The time taken to respond to the user operations should be minute and response should be accurate and precise. \\
 
+\item \textbf{Error Handling}  \\
+	Any error or any undesired situation should be taken care of in the testing phase.  \\
+Exceptions should also be handled in the coding phase and reviewed in the testing phase.  \\
+When all the errors and exceptions would be taken care of it would ensure that our 
+Application works without any uncertainty.  \\
 
-%------------------------------------------------
+\item \textbf{User Friendliness} \\ 
+The application should be such that it is easy to understand its working and to operate the application. The UI design has been made such that it is attractive and user-friendly. A Naïve user can also use without any difficulties. \\
 
-\subsection{Communications Interfaces}
 
+\section{Safety Requirements}
+$<$   $>$
 
-%------------------------------------------------
+\section{Security Requirements}
+As such.There are no safety requirements which are to be satisfied on our part as developers apart from those which are to be followed while using the system.
 
 
-%------------------------------------------------
+\section{Software Quality Attributes}
 
-\section{System Features}
+\item \textbf{Usability}  \\
+Prioritize the important functions and features of the system based on the usage patterns. Frequently used functions should be tested for usability. Most important and used functions like login page, registration template should be tested for usability. The same goes with complex and critical functions. Be sure to create a requirement for this.   \\
 
 
-%------------------------------------------------
+\item \textbf{Supportability}    \\
+The system needs to be cost effective to maintain things will be easy to manage if the system is cost effective. Maintainability requirements may cover various levels of documentation such as system documentation and documentation related to testing and test cases.   \\
 
 
-%------------------------------------------------
+\item \textbf{Reliability}  \\  
+Users have to trust the system, believe in the application and the developer even after using it for a long time. Create a requirement that makes sure that data stored in the system will be retained for a number of years without the data being changed by the system.   \\
 
-\subsection{System Feature {1}}
 
 
-%------------------------------------------------
+\section{Business Rules}
 
 
-%------------------------------------------------
 
-\section{Other Nonfucntional Requirements}
+\chapter{Other Requirements}
 
 
-%------------------------------------------------
+\section{Appendix A: Glossary}
 
 
-%------------------------------------------------
-
-\subsection{Performance Requirements}
-
-
-%------------------------------------------------
-
-
-%------------------------------------------------
-
-\subsection{Safety Requriements}
-
-
-%------------------------------------------------
-
-
-%------------------------------------------------
-
-\subsection{Security Requirements}
-
-
-%------------------------------------------------
-
-
-%------------------------------------------------
-
-\subsection{Software Quality Attrebutes}
-
-
-%------------------------------------------------
-
-
-%------------------------------------------------
-
-\subsection{Business Rules}
-
-
-%------------------------------------------------
 
 \end{document}
