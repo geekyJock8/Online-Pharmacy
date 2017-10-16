@@ -1,0 +1,267 @@
+%Copyright 2014 Jean-Philippe Eisenbarth
+%This program is free software: you can 
+%redistribute it and/or modify it under the terms of the GNU General Public 
+%License as published by the Free Software Foundation, either version 3 of the 
+%License, or (at your option) any later version.
+%This program is distributed in the hope that it will be useful,but WITHOUT ANY 
+%WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A 
+%PARTICULAR PURPOSE. See the GNU General Public License for more details.
+%You should have received a copy of the GNU General Public License along with 
+%this program.  If not, see <http://www.gnu.org/licenses/>.
+
+%Based on the code of Yiannis Lazarides
+%http://tex.stackexchange.com/questions/42602/software-requirements-specification-with-latex
+%http://tex.stackexchange.com/users/963/yiannis-lazarides
+%Also based on the template of Karl E. Wiegers
+%http://www.se.rit.edu/~emad/teaching/slides/srs_template_sep14.pdf
+%http://karlwiegers.com
+\documentclass{article}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hypersetup{
+    bookmarks=false,    % show bookmarks bar?
+    pdftitle={System Test Plan},    % title
+    pdfauthor={Jean-Philippe Eisenbarth},                     % author
+    pdfsubject={TeX and LaTeX},                        % subject of the document
+    pdfkeywords={TeX, LaTeX, graphics, images}, % list of keywords
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links
+    citecolor=black,       % color of links to bibliography
+    filecolor=black,        % color of file links
+    urlcolor=purple,        % color of external links
+    linktoc=page            % only page is linked
+}%
+\def\myversion{1.0 }
+\date{}
+%\title{%
+
+%}
+\usepackage{hyperref}
+\begin{document}
+
+\begin{center}
+    \rule{16cm}{5pt}\vskip1cm
+    \begin{bfseries}
+        \Huge{System Test Plan}\\
+        \vspace{1.9cm}
+        for\\
+        \vspace{1.9cm}
+         Online Pharmacy\\
+        \vspace{1.9cm}
+        \LARGE{Version \myversion approved}\\
+        \vspace{1.9cm}
+        Team no. CS - 01\\
+        \vspace{1.9cm}
+        IIIT VADODARA\\
+        \vspace{1.9cm}
+        \today\\
+    \end{bfseries}
+\end{center}
+
+\tableofcontents
+\newpage
+
+
+\section{Purpose}
+System Test Plan is a comprehensive document which covers the different types of testing that our website Online Pharmacy will go through. Each testing has been covered in greater detail in the forthcoming chapters. Aspects related to the testing such as items to be tested, test approach, entry/exit criteria, pass/fail criteria, suspension/resumption criteria can be found in each of the chapter, wherever applicable. Intended Audience will be the client and Test Team. This document should be read in its entirety to clarify the procedure that needs to be followed for the testing purposes.
+
+\section{Scope}
+This test plan relates to the following System (i.e. object under test):
+\begin{flushleft}
+    \begin{tabular}{|c|c|}
+        \hline
+	    System Name & Online Pharmacy\\
+        \hline
+	    System Version & 1.0\\
+        \hline
+	    Test Run & 3\\
+        \hline
+    \end{tabular}
+\end{flushleft}
+
+\section{Acceptance Criteria}
+In general, a test case is "PASSED" when the real outcome corresponds to the expected outcome, otherwise the test case is marked as “FAILED”.\\ Expected outcomes are defined separately in each test case.
+\begin{itemize}
+\item	a 100\% test coverage is required (i.e. all implemented changes need to be tested at least once)
+\item	no critical defects are tolerated 
+\end{itemize}
+
+\section{Test Procedure}
+
+\subsection{Test Strategy}
+\begin{itemize}
+\item According to the impact analysis of development of made fixes a specific test set is defined for this test run.
+\item At least 100\% of failed test cases will be retested.
+\item In addition to the system validation, localized GUI masks are validated in an individual process.
+\end{itemize}
+
+\subsection{Test Intensity}
+The criticality of any test case is rated, documented and printed with each test case document.
+A 100\% requirement coverage is needed, that means that there is in minimum one test case per specification.
+\begin{flushleft}
+    \begin{tabular}{|p{3cm}|p{11cm}|}
+        \hline
+	    Test Intensity &Test Case Types applied\\
+        \hline
+			Extended &  {-	Valid Input Tests (generate at least 1 possible output or event using valid inputs) \newline
+Plus one or more of the following approaches:\newline
+-	Verifying boundary values for each parameter;\newline
+o	Entering an invalid value for each parameter;\newline
+o	Special input values: 0, negative numbers, wrong format, accented characters, empty fields, extremely high or low values;\newline
+-	Try as much as possible not allowed user actions or events\newline
+-	Interfering/Interrupting events or user actions outside the specified behavior, e.g. removing cables, closing browser window, pushing\newline buttons several times, removing instrument during data transfer, time-outs, parallel browser sessions, etc.\newline
+-	Error Guessing\newline
+}\\
+			\hline
+Standard	& -	Valid Input Tests (generate at least 1 possible output or event using valid inputs)\\
+        \hline
+	    
+        
+    \end{tabular}
+\end{flushleft}
+
+
+\section{Test Case List}
+The following are  the test cases which will be used in order to check the authenticity of our system:\\
+\vspace{0.5cm}
+\\ \textbf{USER INTERFACE:}\\
+\vspace{0.5cm}
+\\ \textbf{ID-TC1:}\\
+ \textbf{TITLE: User Registration}\\
+Desc: This test case checks that the entry of the user is getting properly saved in the database such that the password and the username which he/she enters during the registration successfully works during log in.\\
+
+ \textbf{ID-TC2:}\\
+ \textbf{TITLE: Log In}\\
+Desc: This test case checks that when the entries (username and password) are correct then only the user is able to proceed else he/she will have to change entries.\\
+
+ \textbf{ID-TC3:}\\
+ \textbf{TITLE: Checking data in My Profile}\\
+Desc: This test cases verifies data from the database whether correct details have been displayed or not.\\
+
+ \textbf{ID-TC4:}\\
+ \textbf{TITLE: Edit profile}\\
+Desc: This test case changes all the entries which can be changed and checks if corresponding changes have been made in the database or not.\\
+
+ \textbf{ID-TC5:}\\
+ \textbf{TITLE: Valid Input for searching OTC products}\\
+Desc: This test case checks following parameters:
+\begin{enumerate}
+\item The name should be a valid medicine name (no integer or invalid name allowed or special characters).
+\item On searching Non-OTC products it should display a message “please provide prescription”.
+\item The output should be the all the products related to the specified name.
+\end{enumerate}
+
+ \textbf{ID-TC6:}\\
+\textbf{TITLE: Algorithm Checking}\\
+Desc: This test case will check
+\begin{enumerate} \item Whether the  displaced pharmacies are first five pharmacies according to the range of  distances set by the user or not 
+\item The validity of the pharmacies
+\item The mentioned pharmacies should have enough stock for the requested quantity of item.
+\end{enumerate}
+
+ \textbf{ID-TC7:}\\
+ \textbf{TITLE: Cart Functionality}\\
+Desc: This test case will check:
+\begin{enumerate}
+\item Whether the items are adding correctly or not.
+\item The items should remain stored even after log out.
+\end{enumerate}
+
+ \textbf{ID-TC8:}\\
+ \textbf{TITLE: Upload Prescription}\\
+Desc : This test case checks whether the uploaded image is being saved in the database in the correct account or not and is visible later or not.\\
+
+ \textbf{ID-TC9:}\\
+ \textbf{TITLE : Algorithm2 Checking}\\
+Desc: After uploading the prescription, there would be few options asked from the user, the results should be stored temporarily .\\
+Then the test would verify
+\begin{enumerate}	
+\item Whether the prescription request is reaching the nearest five pharmacies or not.
+\item	Whether the order is given to the first pharmacy which approved the request or not.
+\item	Whether an order is generated or not with details of that order accessible to both customer and pharmacy.
+\end{enumerate}
+
+\textbf{ID-TC10:}\\
+ \textbf{TITLE: Buy Now Option}\\
+Desc: This option will come in two cases\\
+\textbf{Case1:}\\
+When the customer directly selects buy now option  ( without adding to the cart)\\
+The test case in this case would check whether the request is send to the particular pharmacy or not, whether an order is being created or not and the correct order details are accessible to both pharmacy and customer.\\
+
+ \textbf{Case2:}\\
+When the customer selects buy now option for a item added in the cart\\
+The test case works same as in case 1, and additionally it checks whether the item are cleared out of the cart or not.
+\\This test case will also check whether the order is placed or not if the browser closes or network goes off.\\
+
+ \textbf{ID-TC 11:}\\
+ \textbf{TITLE: Check Order Log}\\
+Desc: This test case will check the whether the data displayed is complete or not.\\
+
+ \textbf{ID-TC 12}\\
+ \textbf{TITLE: Cancel order}\\
+Desc: This test case will check that the entry of that order is deleted on both ends user as well as pharmacy and pharmacy should receive a notification regarding the same.\\
+
+ \textbf{ID-TC 13}\\
+ \textbf{TITLE: Review System}\\
+Desc: This test case should check
+\begin{enumerate}
+\item	Whether the star ratings are working perfectly or not.
+\item The user should be able to write comment as long as he/she wishes
+\item The final rating  for a pharmacy is calculated according to the rating algorithm.
+\item The reviews are stored properly in the database 
+\item The reviews of a particular pharmacy should be visible only on their page
+\end{enumerate}
+\vspace{0.5cm}
+ \textbf{PHARMACY INTERFACE:}
+\vspace{0.5cm}
+
+ \textbf{ID-TC14:}\\
+ \textbf{TITLE: Pharmacy Registration}\\
+Desc: This test case checks whether the pharmacy has uploaded the required documents along with all the details.\\
+This test case also checks that all the details are getting properly saved in the database such that the password and the username which pharmacy enters during the registration successfully works during log in.\\
+
+ \textbf{ID-TC15:}\\
+ \textbf{TITLE: Log In}\\
+Desc: This test case checks that when the entries (username and password) are correct then only the user is able to proceed else he/she will have to change entries.\\
+
+ \textbf{ID-TC16:}\\
+ \textbf{TITLE: Product Inventory Formation}\\
+Desc: This test case checks that the particular products selected from the database should only add to the pharmacy’s product database.\\
+
+ \textbf{ID-TC17:}\\
+ \textbf{TITLE: Adding a new Item to the database}\\
+Desc: This test case checks that when a pharmacist wants to add a new product to the database, his/her request should reach the admin.\\
+
+ \textbf{ID-TC18:}\\
+ \textbf{TITLE: Reviewing order log}\\
+Desc:  This test case will check the whether the data displayed is complete or not.\\
+
+ \textbf{ID-TC19:}\\
+ \textbf{TITLE: My Profile}\\
+Desc: This test cases verifies data from the database whether correct details have been displayed or not.\\
+
+ \textbf{ID-TC20:}\\
+ \textbf{TITLE: Edit Profile}\\
+Desc: This test case changes all the entries which can be changed and checks if corresponding changes have been made in the database or not.\\
+
+\vspace{0.5cm}
+\textbf{ADMIN INTERFACE:}\\
+\vspace{0.5cm}
+
+ \textbf{ID-TC21:}\\
+ \textbf{TITLE: Complaint Management}\\
+Desc: This test case checks whether the complaints sent by the user are reaching the administration and admin is able send the feedback to the correct pharmacy or not.\\
+
+ \textbf{ID-TC22:}\\
+\textbf{TITLE: Review Management}\\
+Desc: 	This test case checks that  if a pharmacy has a bad response, it is notified for the same.\\
+
+
+
+
+
+
+\end{document}
