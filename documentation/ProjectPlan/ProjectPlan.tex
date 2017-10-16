@@ -1,0 +1,265 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% LaTeX Template
+% Version 1.1 (1/8/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+%\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+\usepackage{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{Project Plan} % The article title
+
+%\subtitle{Subtitle} % Uncomment to display a subtitle
+
+\author{CS 01 \\(D-Enigma)} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+
+\date{} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS
+%----------------------------------------------------------------------------------------
+
+
+
+%\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+
+\tableofcontents % Print the table of contents
+
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\subsection{\textbf{Overview}}
+
+The purpose of this document is to tentatively define what would be done in each phase of our project development and also the tentative time schedule for each of the processes. It will act as a guideline to the team which can be followed through the various phases of software development. 
+
+\subsection{Project Deliverables}
+
+The deliverables will be:
+\begin{itemize}
+
+\item 	Feasibility Analysis
+\item 	Project Proposal 
+\item 	Project Plan
+\item 	System Requirements and Specifications
+\item 	Software Development Life Cycle
+\item 	System Test Plan
+\item 	Low and High Level Design
+\item 	Software Configuration Management Plan
+\item 	Software Quality Assurance Plan
+\item 	Risk Management and Mitigation Plan
+\item 	Test Report
+\item 	User Manual
+\item 	Deployment Plan
+\item 	Design Documents
+\item 	Test Reports
+
+\end{itemize}
+ 
+ 
+\subsection{Stakeholders}
+\begin{itemize}
+    
+\item Team Members
+\item Client
+\item Doctors
+\item Pharmacist
+\item Hospitals
+\item Consumers
+
+\end{itemize}
+
+
+\subsection{Assumptions, Constraints and Risks}
+
+\subsubsection{Assumptions}
+\begin{itemize}
+\item We will be able to gather database of Government Verified Database.
+\item Pharmacy Sellers will have Computer/Mobile i.e a way to access the Internet and will have required skills to access the Platform.
+\item Pharmacy Sellers will be willing put effort in online inventory management.
+\item Pharmacy Sellers/Consumers will be able to understand written English.
+\item Pharmacy Sellers will manage the delivery of product.
+\end{itemize}
+
+\subsubsection{Constraints}
+\begin{itemize}
+\item Since we are very far away from our client, the only way of communication is through E-mail and as a result we are not able to interact frequently with the client.
+\item We as a team have the knowledge of the technologies on which we are working but we are not experts in these technologies.
+\item We as a team have very little experience of working on such a large scale project.
+\item Being Restricted to government policies regarding the pharmacies.
+\end{itemize}
+
+\subsubsection{Risks}
+\begin{itemize}
+\item Unable to find a suitable Databse/API of Government verified Medicines.
+\item Since we are not experts in the technologies, we don't exactly know how we are going to implement the solution, this may lead to delay in project.
+\item Not being able to make the client understand the User requirements.
+\item Use of website to perform illegal sales.
+\item Unethical/Wrong action/analysis by the Pharmacy Owner.
+\end{itemize}
+
+
+ 
+%----------------------------------------------------------------------------------------
+%	METHODS
+%----------------------------------------------------------------------------------------
+
+\section{Goals and Scope}
+
+
+\subsection{Goal}
+Our project supplies a solution to our client's problem regarding an E-commerce like platform for the interaction of Pharmacy owners and Consumers. The website will contain a User end, a Seller end and an Admin end. We do have existing solution in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution. So, we will provide a solution where there is no third party commission, customer will be directly able to interact with the pharmacy.
+
+
+%------------------------------------------------
+
+\subsection{Scope}
+This is a very wide-scoped project mainly because there are very few constraints. Any Pharmacy seller who has internet access, can register on our website and use it. Similarly any Consumer who wants to purchase a product can buy it through this.
+\\
+But we do have some area limitations as we have designed our project based on the legal rules of Government of India. So, this project can be extended to different countries based on their legal rules and regulation. 
+
+\section{Organization}
+\subsection{Task Division}
+The roles and responsibilities have been divided among the team members taking into consideration each team member’s skills, interest and capabilities to ensure a smooth and successful project completion. The project requires several new tools, technologies and programming languages to be learnt. The following is an elaborate distribution of work among the team members:
+\vspace{6pt}
+\begin{center}
+\textbf{Project Roles and Responsibilities}
+\end{center}
+\vspace{6pt}
+\begin{center}
+\begin{tabular}{|l|l|l|ll}
+\cline{1-3}
+\textbf{Name}      & \textbf{Role} & \textbf{Activites}                                                                                                                              &  &  \\ \cline{1-3}
+Anil Kumar         & Team Member   & \begin{tabular}[c]{@{}l@{}}Surveying, Documentation,\\ Back-end Development\end{tabular}                                                        &  &  \\ \cline{1-3}
+Nikhil Thota       & Team Member   & \begin{tabular}[c]{@{}l@{}}Documentation, Surveying,\\ Font-end Development\end{tabular}                                                        &  &  \\ \cline{1-3}
+Mehak Piplani      & Team Member   & \begin{tabular}[c]{@{}l@{}}Project Design, Documentation, \\ Database Design, \\ Back-end Development\end{tabular}                              &  &  \\ \cline{1-3}
+Sai Koushik        & Team Member   & \begin{tabular}[c]{@{}l@{}}Interviewing, Documentation,\\ Front-end Development\end{tabular}                                                    &  &  \\ \cline{1-3}
+Sudhanshu Bhardwaj & Team Member   & \begin{tabular}[c]{@{}l@{}}Project Design, Documentation, \\ Surveying, Database Design, \\ Back-end Development\end{tabular}                   &  &  \\ \cline{1-3}
+Vikas Rajput       & Team Leader   & \begin{tabular}[c]{@{}l@{}}Project Management, Project Design, \\ UI/UX Design, Documentation, Surveying, \\ Front-end Development\end{tabular} &  &  \\ \cline{1-3}
+\end{tabular}
+
+\end{center}
+
+\subsection{Schedule and Milestones}
+
+\setlength\tabcolsep{1pt}
+\begin{tabular}{| p{1cm}| p{6cm}| p{4cm}| p{3cm}|}
+ \hline
+Serial no. & Milestones & 	Deliverables & Proposed Deadline   \\ [1.5ex] 
+ \hline\hline
+ 1. &	Finalize Project Idea &	Project Topic &	27/08/2017\\ 
+ \hline
+ 2. &	Feasibility Analysis and Project Proposal &	Feasibility Report and Project Proposal	& 03/09/2017 \\
+ \hline
+ 3. & Plan the work to be done in 
+ phases of software development	& Project Plan & 07/09/2017 \\
+ \hline
+4 &	Requirements collection through online surveys, interviews and discussions
+& SRS Document & 29/09/2017 \\
+ \hline
+5 &	Designing of the system &	System Design Documents &	14/10/2017\\
+\hline
+6 &	Coding of modules and unit testing & Unit Tested Modules &	28/10/2017\\
+\hline
+7 &	Integrate individual modules	& &	31/10/2017\\
+\hline
+8 &	Testing and finalizing &	System test report &	5/11/2017\\[1ex] 
+ \hline
+\end{tabular}
+
+\section{Cost Estimations}
+In software engineering, one of the most important factor is cost estimation. The cost is measured in Person hours. Cost of the project is due to the documentation and software to be delivered at the end of the project. As every software used is open source, so cost of these platforms are not taken into account.
+\\ We are using basic \textit{Constructive Cost Model (COCOMO)} for Cost Estimation.
+\\The total LOC in the project will be in the range of 8,000-12,000. By using these values in terms KLOC (Kilo Lines of Code) and as our team consists of a mix of experienced and inexperienced individuals, so it would be a \textit{Semi-detatched} Project.
+By using these values, the range of the Eﬀort and Development Time are calculated and are as follows:
+\\$Effort = 30.80PM - 48.50PM$ 
+\\$Development Time = 8.29 Months - 9.78 Months$
+
+
+
+
+\section{Communication and Reporting}
+\subsection{Communication with the Client}
+The team will be in constant communication with the client (Mr Pankaj from the HCL company) in order to know his requirements and inputs under each increment. If there are any changes in the requirements, modifications will be made accordingly. We would be constantly taking his reviews on the various modules we develop and change accordingly. Although since client lives far away the only way we can contact him is via emails. So as a result sometimes communication takes a bit of time and verification by client also takes a bit more time than in the situation where client is relatively closer.
+
+\subsection{Communication within the Group}
+\begin{table}[h!]
+\begin{tabular}{| p{3cm}| p{3cm}| p{3cm}| p{3cm}|} 
+ \hline
+Type of Communication &
+Medium & Discussion & Participants\\ [1.5ex] 
+ \hline\hline
+Project Meetings & Face to Face &
+Current Status Problems (if any),  Documentation discussion, Application Discussion& Entire Team\\
+\hline
+Sharing Project Data &
+Google Docs, Google Group, Github &
+To keep track of current progress and completed work &
+Entire Team\\
+\hline 
+Meeting with Teaching Assistants & SEN Lab & Guidance & Entire Team \\
+\hline
+\end{tabular}
+\end{table}
+\vspace{1.2cm}
+\subsection{External Communication and Reporting}
+
+External communication takes place in the form of  meetings with the teaching assistant assigned to our group for guidance, assistance and to solve difficulties that we might face. We also talked to our prospective clients to know their requirements as well as build a target audience to showcase our product which might be used by them.
+\\We took a survey of doctors, pharmacists and various patients  to assess the existing problems which our product might improve upon and also to gauge their needs and issues with the existing model of assessment process in place.
+\\Reporting is mainly done in the form of deadline submissions, weekly viva’s and ensuring a finished product within the stipulated time.
+
+\section{Project Monitoring and Quality Control}
+Within the group, tasks are divided among team members are in subgroups. Regular meetings will be held to keep up with the progress of each sub-group. Mistakes and suggestions are then discussed and decided upon by majority and referencing the reading materials of the course.
+\\To maintain the quality control, we try to review every requirement and deliverables of the project and see if it lives upto the standard we require as well as what the client requires. We'll also send periodic updates and reports to the client for his approval and suggestions.
+\\During the coding phase, proper commenting with well indented code is something we always aim for so that the code can be understood by others easily and the mistakes can be rectified quickly.
+\\During Testing phase, we will get the solution tested directly by the users.
+
+\end{document}
