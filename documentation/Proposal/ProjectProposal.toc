@@ -1,0 +1,31 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}User End}{1}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Registration}{1}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Dashboard}{2}{subsubsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.3}Product Browsing}{2}{subsubsection.1.1.3}
+\contentsline {subsubsection}{\numberline {1.1.4}Dealing with Prescription}{2}{subsubsection.1.1.4}
+\contentsline {subsubsection}{\numberline {1.1.5}Delivery Status}{2}{subsubsection.1.1.5}
+\contentsline {subsubsection}{\numberline {1.1.6}Share Deal on Social Network}{2}{subsubsection.1.1.6}
+\contentsline {subsubsection}{\numberline {1.1.7}Review}{2}{subsubsection.1.1.7}
+\contentsline {subsubsection}{\numberline {1.1.8}Cart}{2}{subsubsection.1.1.8}
+\contentsline {subsection}{\numberline {1.2}Pharmacy End}{2}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Pharmacy Registration}{2}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Product Inventory}{2}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Seller Dashboard}{2}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Delivery status}{2}{subsubsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.5}Contact user}{2}{subsubsection.1.2.5}
+\contentsline {subsection}{\numberline {1.3}Administrator End}{2}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Dashboard}{2}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}Track Review}{2}{subsubsection.1.3.2}
+\contentsline {section}{\numberline {2}Proposed Implementation Plans and Time-line}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Project Time-line}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Tools and Technologies}{3}{subsection.2.2}
+\contentsline {section}{\numberline {3}Requirements and Assumptions}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Requirements}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Assumptions}{3}{subsection.3.2}
+\contentsline {section}{\numberline {4}Project Risks}{3}{section.4}
+\contentsline {section}{\numberline {5}Challenges}{3}{section.5}
+\contentsline {section}{\numberline {6}Secondary Features}{3}{section.6}
+\contentsline {section}{\numberline {7}Future Extensions}{3}{section.7}
+\contentsfinish 

@@ -1,0 +1,228 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.1 (1/10/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{../SelfArx} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+\setcounter{tocdepth}{2}
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\sffamily
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+\hypersetup{hidelinks,colorlinks,breaklinks=true,urlcolor=color2,citecolor=color1,linkcolor=color1,bookmarksopen=false,pdftitle={Title},pdfauthor={Author}}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Ver. 2.0} % Journal information
+\Archive{} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{Online Pharmacy\\ \Large Project Proposal} % Article title
+
+\Authors{{\textbf{Team Members:}} \\Anil\\Mehak\\Nikhil\\Sai\\Sudhanshu\\Vikas } % Authors
+\affiliation{\textit{D-Enigma (Group - CS 01)}} % Author affiliation
+\affiliation{\textit{Indian Institute of Information Technology, Vadodara.}} % Author affiliation
+\Keywords{Pharmacy, OTC(Over The Counter)} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{In today's world where thing is getting online, we are still lacking very far behind on Online Pharmaceuticals Services.We do have existing solution for Online Pharmacy in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution.}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\sffamily
+\flushbottom % Makes all text pages the same height
+
+\maketitle % Print the title and abstract box
+
+\tableofcontents % Print the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction} % The \section*{} command stops section numbering
+
+We are making an “Amazon” like e-commerce platform of Pharmacy for our client. The website will contain a user end, a seller end and an admin end. We do have existing solution in market (1mg etc.), however most of the system are commissioned based and require approval process from third party (platform provider). This is tedious task as customer are not directly connected with pharmacy. Additionally, this is commissioned based and that is why most of the pharmacy are still not connected with online service provider or they have their local solution. So, we will provide a solution where there is no third party commission, customer will be directly able to interact with the pharmacy.
+
+%------------------------------------------------
+
+\subsection{User End}
+
+It is an interface for user where he/she will be able to search for pharmacy products and the nearest pharmacy where they are available. Our solution will consist of an algorithm which will guide to the nearest registered pharmacy where all his/her requirements will be met. User will have the choice to either buy the product online or go to the pharmacy (we will provide him/her the address of pharmacy) and buy it offline. Following are the functional requirements of the user interface:
+%------------------------------------------------
+\subsubsection{Registration}
+
+When a customer visits the site first time he/she will be asked to register an account. This page will ask the user to enter his Name, Email and Phone Contact. A verification OTP/Email will be send to the user and it will be used to authenticate the user.
+%------------------------------------------------
+\subsubsection{Dashboard}
+This will contain all the options for user to managing his/her account. This will include the personal details of user, his/her delivery address, his/her contact details and he/she will be able to manage his/her orders from here.
+%------------------------------------------------
+\subsubsection{Product Browsing}
+We will provide the user two option
+\begin{enumerate}
+\item {OTC Products}
+User will be able to search these products and order them online or buy them offline.
+\item {Non OTC Products}
+These products will require a prescription from a doctor.
+\end{enumerate}
+%------------------------------------------------
+
+\subsubsection{Dealing with Prescription}
+Once a user uploads a prescription, the prescription will be sent to all the nearby pharmacies. From there on the pharmacy who ever responds "Thumbs Up" to the prescription first will be directed to the customer. In case a pharmacy doesn't have all the medicines prescribed we, will provide an interface where the pharmacy will be able to directly contact other pharmacies present on our platform and ask them for their help. Along with the list of medicines pharmacy will also be responsible for checking the date and authenticity of the prescription.
+%------------------------------------------------
+\subsubsection{Delivery Status}
+This will first give the user an estimate once the order is placed. After that it will continuously update according to the response of the delivery team.
+%------------------------------------------------
+
+\subsubsection{Share Deal on Social Network}
+We will integrate some social media sites to our platform so that user can share his/her experience on social media.
+%------------------------------------------------
+\subsubsection{Review}
+User will be able to comment or give rating to a particular product or a seller regarding his/her experience. These ratings will be visible to all the user of site.
+%------------------------------------------------
+\subsubsection{Cart}
+User will be able to add/remove/modify the products in the cart. User can directly add OTC products into the cart. And once the prescription is analysed, user will be given an option to add the products into the cart. Cart will be used to place the order.
+%------------------------------------------------
+
+\subsection{Pharmacy End}
+
+It is an interface for the various Pharmacies which are interested in selling their products on our Platform. The seller will be first required to first register and then he/she will be able to list and sell his/her products in a few simple steps.
+%------------------------------------------------
+\subsubsection{Pharmacy Registration}
+
+Any Seller who wants to sell his/her product on our interface will be first required to provide a proof of his/her licence. Along with this they will need to enter the name of Pharmacy, name of owner, Address, Pharmacist’s Qualification and Contact Details. 
+%------------------------------------------------
+\subsubsection{Product Inventory}
+
+Seller will be able to list all the products available with him/her. The inventory will contain Product Name, Picture, Details, Expiry, Quantity, etc.
+%------------------------------------------------
+\subsubsection{Seller Dashboard}
+
+This will contain all the option for managing his account. This will include dealing with orders and prescription and Admin messages.
+
+%------------------------------------------------
+\subsubsection{Delivery status}
+Seller will be able to see all the products dispatched from his store and their delivery status.
+%------------------------------------------------
+\subsubsection{Contact user}
+Once the prescription has been accepted by the Seller, he will be able to see the contact details of the consumer and then if needed contact the user.
+%------------------------------------------------
+\phantomsection
+\subsection{Administrator End}
+It is an interface for Administration where Admin regulates pharmacies and manages user account. Monitoring the authentication of pharmacy.
+Take actions against the pharmacies and users who has been reported of doing unethical work.
+\subsubsection{Dashboard}
+This will contain all the options for the Admin. This will include managing the authentication and verification of Pharmacy.
+\subsubsection{Track Review}
+From here the Admin will be able to track the reviews given by consumers to different sellers. And according to these reviews the Admin may take action against the Seller.
+%----------------------------------------------------------------------------------------
+
+\section{Proposed Implementation Plans and Time-line}
+
+%------------------------------------------------
+\subsection{Project Time-line}
+The following is an abstract high-level Proposed Project Plan and Time-line:
+\begin{enumerate}
+\item The Project Duration is 2 to 2.5 months. The End of the Project will be denoted by successful testing and small scale Deployment.
+\item The Initial Requirements Analysis and Survey phase is set to last for approximately 2 weeks.
+\item After Completion of Requirement Analysis, next comes Design Phase which is set to last around 2 to 3 weeks.
+\item Next Comes the Coding Phase Which is set to last around 3 to 4 weeks.
+\item Finally if the time permits we will do Testing and small scale deployment.
+Server.
+\end{enumerate}
+%------------------------------------------------
+\subsection{Tools and Technologies}
+Following is the list of tools and technologies we are planning to use(they may change if extra requirements arrive):
+\begin{enumerate}
+\item Django Web Framework
+\item Oscar: E-Commerce Framework for Django
+\item HTML, CSS, JS and several UI plug-ins for Front End.
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+
+\section{Requirements and Assumptions}
+
+%------------------------------------------------
+\subsection{Requirements}
+We will require a hosting service to test our project online.
+%------------------------------------------------
+\subsection{Assumptions}
+We have taken the assumption that all the Pharmacies which will use our Platform will have access to Computers or Smart Phones.
+We have also assumed that the pharmacies will use the platform actively and reply to consumers fast.
+
+
+%----------------------------------------------------------------------------------------
+
+\section{Project Risks}
+Although a decent solution in itself. Our solution is not human error proof. As of now our current solution would in way be able to tell if the Prescription reader read the prescription correctly or not. Also in our primary objectives we don't have system which prevents the seller from uploading Non-OTC products.
+%----------------------------------------------------------------------------------------
+
+\section{Challenges}
+The major challenge in our project is making our platform multi-vendor. Since we have multiple vendors on our platform, we will have to integrate vendors, consumers and Admin all at one platform and this will be our main challenge. Along with this we will also have to make a good database. And UI/UX is as important as all the other things because if it's not user friendly, user wouldn't want to use it.
+%----------------------------------------------------------------------------------------
+
+\section{Secondary Features}
+If time permits we would like to add following features in our app:
+\begin{enumerate}
+\item Pharmacy Advertisement
+\item A System which prevents the seller from uploading Non-OTC products
+\item Online Payment Gateway
+\item Integration with Delivery Services
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+
+\section{Future Extensions}
+In future if the technology permits, we can automate the system of prescription analysing. In such a system Computer will scan the prescription, verify and authenticate it and read the medicines from it and finally automatically add it to the cart.
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
