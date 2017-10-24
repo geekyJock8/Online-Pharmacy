@@ -1,0 +1,8 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Purpose}{3}{section.1}
+\contentsline {section}{\numberline {2}Scope}{3}{section.2}
+\contentsline {section}{\numberline {3}Acceptance Criteria}{3}{section.3}
+\contentsline {section}{\numberline {4}Test Procedure}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Test Strategy}{3}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Test Intensity}{3}{subsection.4.2}
+\contentsline {section}{\numberline {5}Test Case List}{4}{section.5}
