@@ -1,0 +1,4 @@
+This app will handle dashboard of the Pharmacy.
+So the url associated to this app is of the form www.xyz.com/pharmacy_name
+
+This app will contains 3 models Pharmacy , contact number , notifications
