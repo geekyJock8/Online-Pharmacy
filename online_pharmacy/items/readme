@@ -1,0 +1,9 @@
+This file handles all the items in the database and it also handles the different category of products
+
+According to me the searching of the item is handled by this app....
+
+So this app deals with urls of the form www.xyz.com/search/all?name=pcm
+
+This app contains only 1 model having data of all the medicines.....
+
+
