@@ -1,0 +1,17 @@
+<html>
+<head><title>Login</title>
+
+</head>
+
+<body>
+    <div class="form">
+    <form action="{% url 'showDashboard2'%}" method="post">
+    {% csrf_token %}
+        <input type="text" name="username" size="20"><br />
+        <input type="text" name="passsword" size="20"><br />
+
+        <input type="submit" value="Submit" />
+    </form>
+    </div>
+</body>
+</html>

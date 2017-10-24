@@ -1,0 +1,26 @@
+<html>
+<head><title>Register</title>
+
+</head>
+
+<body>
+    <div class="form">
+    <form action="{% url 'pharmacy_login'%}" method="post">
+    {% csrf_token %}
+        <input type="text" name="pharmacy_id" size="20"><br />
+        <input type="text" name="pharmacy_name" size="20"><br />
+        <input type="text" name="passsword" size="20"><br />
+        <input type="text" name="fname" size="20"><br />
+        <input type="text" name="lname" size="20"><br />
+        <input type="file" name="vat" value="fileupload" id="fileupload"><br />
+        <input type="file" name="drug" value="fileupload1" id="fileupload1"><br />
+        <input type="text" name="street" size="20"><br />
+        <input type="text" name="street" size="20"><br />
+        <input type="text" name="city" size="20"><br />
+        <input type="text" name="state" size="20"><br />
+        <input type="text" name="pincode" size="20"><br />
+        <input type="submit" value="Add" />
+    </form>
+    </div>
+</body>
+</html>
