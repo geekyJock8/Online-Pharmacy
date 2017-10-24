@@ -1,0 +1,5 @@
+This app deals with the inventory of the Pharmacy.
+The url associated with this app is of the form www.xyz.com/pharmacy_name/inventory
+
+This app deals with only 1 model named Sells (see relational schema if any doubt).
+

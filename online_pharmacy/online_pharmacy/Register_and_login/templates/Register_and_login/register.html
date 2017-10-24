@@ -1,0 +1,21 @@
+<html>
+<head><title>Register</title>
+
+</head>
+
+<body>
+    <div class="form">
+    <form action="{% url 'user_login'%}" method="post">
+    {% csrf_token %}
+        <input type="text" name="username" size="20"><br />
+        <input type="text" name="passsword" size="20"><br />
+        <input type="text" name="lname" size="20"><br />
+        <input type="text" name="fname" size="20"><br />
+        <input type="text" name="age" size="20"><br />
+        <input type="text" name="email" size="20"><br />
+        <input type="text" name="cart_id" size="20"><br />
+        <input type="submit" value="Add" />
+    </form>
+    </div>
+</body>
+</html>

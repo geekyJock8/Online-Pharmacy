@@ -1,0 +1,13 @@
+This app will handle the pages shown at the time of checkout.
+
+Both order with prescription and order without prescription are handled in this app.
+
+This app will deal with the pages having urls of the form :
+
+www.xyz.com/order/address
+www.xyz.com/order_with_prescription/
+www.xyz.com/order_with_prescription/address
+www.xyz.com/order_with_prescription/specify
+www.xyz.com/order/placed
+www.xyz.com/order_with_prescrition/placed
+

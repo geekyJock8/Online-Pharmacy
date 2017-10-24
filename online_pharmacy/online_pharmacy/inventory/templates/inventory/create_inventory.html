@@ -1,0 +1,25 @@
+<html>
+<head><title>Register</title>
+
+</head>
+
+<body>
+    <div class="form">
+    <form action="{% url 'showInventory'%}" method="post">
+    {% csrf_token %}
+        <input type="text" name="item_id" size="20"><br />
+        <input type="text" name="item_name" size="20"><br />
+        <input type="file" name="image" value="fileupload" id="fileupload"><br />
+        <input type="text" name="otc_or_not" size="20"><br />
+        <input type="text" name="brand_name" size="20"><br />
+        <input type="text" name="salts" size="20"><br />
+        <input type="text" name="specifications" size="20"><br />
+        <input type="text" name="category" size="20"><br />
+        <input type="text" name="quantity" size="20"><br />
+        <input type="text" name="price_per_item" size="20"><br />
+
+        <input type="submit" value="Add" />
+    </form>
+    </div>
+</body>
+</html>
