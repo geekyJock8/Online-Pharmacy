@@ -1,0 +1,4 @@
+This app will handle dashboard of the customer.
+So the url associated to this app is of the form www.xyz.com/username
+
+This app will contains 4 models customer , contact number , address , notifications
