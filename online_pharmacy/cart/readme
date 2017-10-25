@@ -1,0 +1,4 @@
+This app will basically show the page of the cart and show the items in that cart by fetching data from the table
+Link associated to this cart is of the form www.xyz.com/username/cart/
+
+One model is formed in this app named "contains" (refer relational schema in case of doubt).
